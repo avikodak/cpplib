@@ -1,9 +1,8 @@
 /****************************************************************************************************************************************************
- *  File Name                   : CommonIncludes.h
- *  File Location               : /algos/src/avikodak/v1/lib/common/CommonIncludes.h
- *  Created on                  : Feb 20, 2022 :: 11:06:04 AM
+ *  File Name                   : SingleLinkedList.h
+ *  File Location               : /libv2/v1/sill/SingleLinkedList.h
+ *  Created on                  : Aug 19, 2022 :: 1:55:14 PM
  *  Author                      : avikodak
- *  Testing Status              : TODO
  *  URL                         : TODO
  ****************************************************************************************************************************************************/
 
@@ -20,7 +19,6 @@
 #include <ctime>
 #include <list>
 #include <map>
-#include <unordered_map>
 #include <set>
 #include <bitset>
 #include <functional>
@@ -35,6 +33,22 @@
 #include <stdexcept>
 #include <limits.h>
 #include <stdint.h>
-#include <memory>
-#include "../tree/BinaryTreeNode.h"
-#include "../sill/SingleLinkedList.h"
+
+#ifndef V1_SILL_SINGLELINKEDLIST_H_
+#define V1_SILL_SINGLELINKEDLIST_H_
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() :
+            val(0), next(nullptr) {
+    }
+    ListNode(int x) :
+            val(x), next(nullptr) {
+    }
+    ListNode(int x, ListNode *next) :
+            val(x), next(next) {
+    }
+};
+
+#endif /* V1_SILL_SINGLELINKEDLIST_H_ */

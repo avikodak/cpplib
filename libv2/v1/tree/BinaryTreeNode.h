@@ -42,16 +42,31 @@ template<typename T>
 class BinaryNode {
 
 public:
-    BinaryNode(T value) {
-        this->value = value;
-        this->left = nullptr;
-        this->right = nullptr;
-    }
+	BinaryNode(T value) {
+		this->value = value;
+		this->left = nullptr;
+		this->right = nullptr;
+	}
 
 private:
-    T value;
-    std::unique_ptr<BinaryNode> left;
-    std::unique_ptr<BinaryNode> right;
+	T value;
+	std::unique_ptr<BinaryNode> left;
+	std::unique_ptr<BinaryNode> right;
+};
+
+struct TreeNode {
+	int val;
+	TreeNode *left;
+	TreeNode *right;
+	TreeNode() :
+			val(0), left(nullptr), right(nullptr) {
+	}
+	TreeNode(int x) :
+			val(x), left(nullptr), right(nullptr) {
+	}
+	TreeNode(int x, TreeNode *left, TreeNode *right) :
+			val(x), left(left), right(right) {
+	}
 };
 
 #endif /* AVIKODAK_V1_LIB_TREE_BINARYTREENODE_H_ */
